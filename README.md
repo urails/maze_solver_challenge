@@ -16,17 +16,9 @@ where `maze.txt` will be of the form:
 #S####
 ```
 
-`#` are walls, `.` are movable spaces, `S` is the starting position and `E` is the end of the maze. You goal is from `S` to `E` by only moving on movable spaces. You program should print out either `No solution` if a solution can't be found. If a solution is found, it should print out the board with `+` indicating the path it took. For example:
+`#` are walls, `.` are movable spaces, `S` is the starting position and `E` is the end of the maze. You goal is from `S` to `E` by only moving on movable spaces.
 
-```
-######
-#.+++#
-#.+#+#
-#++#+E
-#S####
-```
-
-Your program should either print "No solution." if it could not find a solution, or print a string of directions from `S` to `E` (N, E, S, W) if there was a solution. Examples:
+Your program should either print "No solution" if it could not find a solution, or print a string of directions from `S` to `E` (N, E, S, W) if there was a solution. Examples:
 
 ```
 # No solution
