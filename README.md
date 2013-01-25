@@ -38,15 +38,13 @@ You first need to parse in the file. You can assume that all rows are the same l
 
 You may use whichever method you like to solve it, though I will describe my method here.
 
-* Parse the board into an array of arrays called `board`
-* Create another array of arrays that will store booleans for visited spaces on the board called `visited`
-* Parse in the board, filling in the `visited` arrays as necessary with `true` or `false`
+* Create an array of arrays that will store booleans for visited spaces on the board called `visited`
+* Parse the maze file, filling in the `visited` arrays as necessary with `true` or `false` (`true` if it's a wall, `false` if it's a movable space)
 * While parsing, find the coordinates of the `S` and `E` in the board, store them in a Point object.
-* Mark all "walls" as visited in the visited array.
 * Create another array of arrays where we'll store all solutions called `solutions`
 * Starting at `S`, check all surrounding spaces.
 * If you find an open space (`.`):
-    * Append the direction you moved (`N`, `S`, `E`, `W`) to find that space to the string already in the space you are in.
+    * Append the direction you would take to move to that space (`N`, `S`, `E`, `W`)  to the string at the space you are currently exploring, and store it in the new space.
 * If you don't find an open space, just return.
 * When you're done, check the `E` spot. If it's null, there was no solution, if it's not, then there should be a string of the exact movements to take to get from `S` to `E`.
 * Loop through the solution, inserting `+` with each movement.
